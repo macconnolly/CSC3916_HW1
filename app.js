@@ -16,6 +16,7 @@ server.on("request", (request, response) => {
             response.end();
         });
     response.on("error", err => {
+        response.statusCode = 500;
         console.error(err);
     });
 });
